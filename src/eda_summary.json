@@ -1,0 +1,84 @@
+{
+  "rows": 3955,
+  "labels": {
+    "Yes": 1401,
+    "Can't tell": 729,
+    "No": 1825
+  },
+  "top_subreddits": [
+    [
+      "conspiracy",
+      665
+    ],
+    [
+      "PlanetToday",
+      37
+    ],
+    [
+      "CoronavirusCirclejerk",
+      34
+    ],
+    [
+      "news",
+      32
+    ],
+    [
+      "TrueReddit",
+      32
+    ],
+    [
+      "centrist",
+      32
+    ],
+    [
+      "geopolitics",
+      29
+    ],
+    [
+      "collapse",
+      29
+    ],
+    [
+      "LouderWithCrowder",
+      29
+    ],
+    [
+      "Bitcoin",
+      29
+    ],
+    [
+      "scientology",
+      29
+    ],
+    [
+      "LateStageCapitalism",
+      29
+    ],
+    [
+      "Bibleconspiracy",
+      28
+    ],
+    [
+      "Futurology",
+      28
+    ],
+    [
+      "collapze",
+      28
+    ]
+  ],
+  "marker_types": {
+    "Evidence": 3341,
+    "Victim": 3016,
+    "Actor": 5866,
+    "Action": 4423,
+    "Effect": 3433
+  },
+  "text_length_chars": {
+    "min": 146,
+    "p25": 248,
+    "median": 361,
+    "p75": 544,
+    "max": 3958
+  }
+}

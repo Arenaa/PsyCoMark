@@ -1,0 +1,83 @@
+train: n=3020  {'Yes': 1078, "Can't tell": 549, 'No': 1393}
+val: n=646  {'Yes': 231, "Can't tell": 117, 'No': 298}
+test: n=650  {'Yes': 232, "Can't tell": 119, 'No': 299}
+Map: 100%
+ 3020/3020 [00:02<00:00, 1251.48 examples/s]
+Map: 100%
+ 646/646 [00:00<00:00, 1378.30 examples/s]
+Map: 100%
+ 650/650 [00:00<00:00, 1326.57 examples/s]
+
+=== DATASET DEBUG ===
+Dataset columns: ['input_ids', 'attention_mask', 'token_labels', 'doc_label']
+Sample item type: <class 'dict'>
+Sample features: dict_keys(['input_ids', 'attention_mask', 'token_labels', 'doc_label'])
+
+First item content:
+  input_ids: list of length 53, first few: [0, 133, 10934]
+  attention_mask: list of length 53, first few: [1, 1, 1]
+  token_labels: list of length 53, first few: [0, 0, 9]
+  doc_label: <class 'int'> = 1
+
+=== COLLATOR TEST ===
+Test batch length: 2
+First item in batch type: <class 'dict'>
+First item keys: dict_keys(['input_ids', 'attention_mask', 'token_labels', 'doc_label'])
+Successfully accessed token_labels: length=53
+==================================================
+/tmp/ipython-input-1466300112.py:380: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `WrappedTrainer.__init__`. Use `processing_class` instead.
+  trainer = WrappedTrainer(
+
+=== COLLATOR CALL #1 ===
+Number of features: 16
+First feature type: <class 'dict'>
+First feature: {'input_ids': [0, 30682, 9002, 1594, 1076, 12, 104, 5602, 6, 3345, 18, 1229, 2003, 261, 3361, 734, 1437, 1437, 50118, 1127, 1132, 6, 8835, 111, 11185, 15664, 994, 224, 79, 18, 41, 793, 12, 22950, 14926, 32562, 6988, 6, 150, 841, 8249, 69, 25, 10, 22382, 37232, 136, 27215, 194, 3198, 11, 3345, 480, 8, 41, 2222, 6, 7578, 693, 11, 10, 2943, 12, 23169, 22077, 4, 125, 51, 2854, 14, 5, 4981, 12, 180, 12, 279, 471, 9, 5, 3158, 18, 1229, 1494, 2215, 69, 2682, 4, 22, 2515, 4889, 66, 142, 79, 3820, 10, 4044, 4, 264, 34, 205, 6833, 11360, 8, 182, 205, 613, 2655, 60, 4090, 692, 4110, 404, 9665, 174, 5040, 4, 1960, 118, 34, 5, 94, 2136, 15, 1736, 1229, 2982, 30564, 2963, 6, 3099, 3589, 13291, 8, 3158, 503, 240, 69, 7, 2272, 12, 6991, 1188, 13, 1377, 6, 16668, 50, 97, 3081, 4, 264, 747, 5284, 22692, 6, 217, 41, 2120, 30, 10, 168, 3158, 11, 199, 7, 1471, 10, 2671, 1013, 1229, 30, 30768, 2284, 63, 1321, 108, 582, 11165, 8, 10345, 22, 41796, 1321, 113, 480, 1138, 14, 5152, 15, 5, 10984, 53, 45, 11, 588, 301, 734, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'token_labels': [0, 0, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'doc_label': 2}
+Has keys(): ['input_ids', 'attention_mask', 'token_labels', 'doc_label']
+It's a regular dict
+token_labels in dict: True
+
+=== COLLATOR CALL #2 ===
+Number of features: 16
+First feature type: <class 'dict'>
+First feature: {'input_ids': [0, 43795, 4670, 12498, 21, 2277, 142, 37, 30399, 19, 140, 18, 4724, 7, 3549, 55, 741, 4060, 4, 22, 250, 485, 803, 88, 1718, 3775, 13057, 4932, 2963, 1850, 11, 5, 8867, 641, 223, 18332, 1071, 1487, 14, 545, 949, 1321, 5915, 49, 3136, 25, 559, 34624, 50, 8653, 13, 49, 173, 15, 2147, 464, 6, 1007, 50, 8360, 72, 1437, 50118, 6310, 571, 19171, 4, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'token_labels': [0, 5, 6, 6, 0, 3, 0, 5, 9, 0, 1, 2, 0, 0, 0, 0, 5, 6, 6, 0, 0, 7, 8, 8, 0, 7, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 6, 0, 0, 0, 0, 0, 9, 0, 9, 0, 5, 3, 0, 7, 8, 8, 8, 0, 7, 8, 0, 0, 0, 0, 0, 0, 0], 'doc_label': 0}
+Has keys(): ['input_ids', 'attention_mask', 'token_labels', 'doc_label']
+It's a regular dict
+token_labels in dict: True
+ [756/756 01:46, Epoch 4/4]
+Epoch	Training Loss	Validation Loss	Token F1	Token Precision	Token Recall
+1	2.103300	2.056626	0.000000	0.000000	0.000000
+2	1.940000	1.928669	0.010619	0.092784	0.005632
+3	1.728900	1.957122	0.019069	0.091892	0.010638
+4	1.654400	1.930645	0.023408	0.089958	0.013454
+/usr/local/lib/python3.12/dist-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ [41/41 00:05]
+Validation (token) metrics from Trainer: {'eval_loss': 1.9306449890136719, 'eval_token_f1': 0.023407729994556346, 'eval_token_precision': 0.0899581589958159, 'eval_token_recall': 0.013454317897371715, 'eval_runtime': 1.9486, 'eval_samples_per_second': 331.524, 'eval_steps_per_second': 21.041, 'epoch': 4.0}
+
+Validation (doc) metrics:
+Doc Macro-F1: 0.5669633521275864
+              precision    recall  f1-score   support
+
+          No       0.66      0.71      0.68       298
+         Yes       0.65      0.58      0.61       231
+  Can't tell       0.40      0.41      0.41       117
+
+    accuracy                           0.61       646
+   macro avg       0.57      0.57      0.57       646
+weighted avg       0.61      0.61      0.61       646
+
+
+Test (token) metrics from Trainer view:
+{'eval_loss': 1.9279619455337524, 'eval_token_f1': 0.023601847101077475, 'eval_token_precision': 0.09465020576131687, 'eval_token_recall': 0.013481828839390387, 'eval_runtime': 2.0615, 'eval_samples_per_second': 315.307, 'eval_steps_per_second': 19.889, 'epoch': 4.0}
+
+Test (doc) metrics:
+Doc Macro-F1: 0.5260566095215501
+              precision    recall  f1-score   support
+
+          No       0.67      0.71      0.69       299
+         Yes       0.64      0.56      0.60       232
+  Can't tell       0.28      0.30      0.29       119
+
+    accuracy                           0.58       650
+   macro avg       0.53      0.53      0.53       650
+weighted avg       0.59      0.58      0.58       650
